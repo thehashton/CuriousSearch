@@ -1,7 +1,12 @@
 'use client'
 import React, { ChangeEvent, useState } from 'react';
 
-const Search = ({ onSearch: string }) => {
+export type SearchProps = {
+    onSearch: string
+}
+
+const Search = (props: SearchProps) => {
+    const { onSearch } = props;
     const [value, setValue] = useState('Enter search...');
 
     const searchHandler = (event: ChangeEvent<HTMLInputElement>) => {
