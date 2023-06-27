@@ -2,7 +2,7 @@
 import React, { ChangeEvent, useState } from 'react';
 
 export type SearchProps = {
-    onSearch: string
+    onSearch: (value: string) => void
 }
 
 const Search = (props: SearchProps) => {
